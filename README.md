@@ -1,44 +1,56 @@
-### React + Vite
-
-# Застосунок із маршрутизацією для пошуку фільмів за назвою. 
-
-Використано сервіс TMDB https://developer.themoviedb.org/docs/getting-started.
+# 🍿Trending Movies 🎥 Search App
+## A dynamic web application for discovering movies🎬, featuring real-time search and detailed cinema insights by integrating the TMDB API.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/d0b4ad1e-be76-4633-b43b-de317e2b78b5" alt="TRENDING MOVIES App Screenshot" width="450" />
+  <img src="https://github.com/user-attachments/assets/d0b4ad1e-be76-4633-b43b-de317e2b78b5" alt="Trending Movies Search App Screenshot" width="450" />
   <br>
-  <sub>TRENDING MOVIES App Screenshot</sub>
+  <sub>Trending Movies Search App Screenshot</sub>
 </p> 
 
-При натисканні на посилання Go back (після перегляду акторів/ рев'ю) користувач має повернутися на сторінку, з якої він зайшов на сторінку з деталями фільма. Якщо сторінку було оновлено і об'єкт місцезнаходження не зберігся, то повернення користувача на "/movies”.
+## [Live Project](https://id753.github.io/todo-project/) 
+## API Integration: Built using [TMDB Documentation](https://developer.themoviedb.org/docs/getting-started) for comprehensive media data retrieval.
 
-Навігація в додатку.
-У застосунку створено наступні маршрути:
+## 🎨 Tech Stack
+- Core: React, JavaScript (ES6+).
+- Routing: React Router v6 (Nested Routes, Dynamic Params).
+- Data Fetching: Axios, TMDB REST API.
+- State & Optimization: React Hooks (useEffect, useState, useRef, useMemo), React.lazy, Suspense.
+- Forms: Formik.
+- Styling: CSS Modules (for component-scoped styles).
+- Build & Deployment: Vite, Vercel.
 
-    '/' – компонент HomePage, домашня сторінка із списком популярних кінофільмів.
-    '/movies' – компонент MoviesPage, сторінка пошуку кінофільмів за ключовим словом.
-    '/movies/:movieId' – компонент MovieDetailsPage, сторінка із детальною інформацією про кінофільм.
-    /movies/:movieId/cast – компонент MovieCast, інформація про акторський склад. Рендериться в нижній частині на сторінці MovieDetailsPage.
-    /movies/:movieId/reviews – компонент MovieReviews, інформація про огляди. Рендериться в нижній частині на сторінці MovieDetailsPage.
-    Якщо користувач зайшов за неіснуючим маршрутом, потрібно показувати компонент NotFoundPage, в якому є посилання Link на домашню сторінку.
+## Features
+### Frontend Experience
+- 📚 **Dynamic Data Fetching**: Implemented asynchronous API integration using Axios to fetch trending movies, detailed descriptions, cast lists, and user reviews.
+- 🚀 **Advanced Routing & Navigation**: Utilized React Router for complex navigation, including nested routes for cast/reviews and a robust "Go Back" functionality using useLocation and useRef.
+- 💾 **Performance Optimization**: Applied Code Splitting with React.lazy and Suspense to reduce initial bundle size and improve page load speed.
+- ⚡ **Stateful Search Logic**: Developed a search interface with URL persistence via useSearchParams, allowing users to share specific search results through the browser link.
+- 🧱 **Graceful Data Handling**: Integrated loading states, custom "404 Not Found" handling, and placeholder image logic for missing movie posters or actor profiles.
+- ✏️ **Form Management**: Built a clean search interface using Formik for efficient form handling and submission logic.
+
+
+## 🧭Application Navigation
+The following routes have been implemented in the application:
+- '/' – HomePage: The main landing page displaying a list of currently trending movies.
+- '/movies' – MoviesPage: A dedicated page for searching movies by keyword.
+- '/movies/:movieId' – MovieDetailsPage: A detailed view providing comprehensive information about a specific movie.
+- '/movies/:movieId/cast' – MovieCast: Displays the cast members, rendered as a nested component at the bottom of the MovieDetailsPage.
+- '/movies/:movieId/reviews' – MovieReviews: Displays user reviews, rendered as a nested component at the bottom of the MovieDetailsPage.
+- NotFoundPage: A fallback component that renders for any non-existent routes, including a Link to redirect users back to the Home page.
     
-Додано асинхронне завантаження JS-коду для маршрутів застосунку, використовуючи React.lazy та Suspense.
+    
+## ✅ Getting Started (Frontend)
+Clone the repository
+      
+    git clone git@github.com:id753/todo-project.git
+Install dependencies
 
----
+     npm install
+Environment Variables
+Create a .env file in the root directory (use .env.example as a template):
 
-Розгорнуто на Vercel.</br>
-Проект створений за допомогою Vite.</br>
-Для кожного компонента у папці src/components є окрема папка, яка містить JSX файл самого React компонента та файл його стилів. Назва папки, файла компонента (з розширенням .jsx) та файла стилів (перед .module.css) однакова і відповідає назвам, вказаним у завданнях (якщо вони були)</br>
-Для кожної сторінки у папці src/pages є окрема папка, яка містить JSX файл самого React компонента та файл його стилів.</br>
-Для експорту компонентів використовується експорт за замовчуванням (export default).</br>
-Використано Prettier. </br>
-Стилізація виконана за допомогою CSS-модулів.</br>
+    VITE_API_URL=http://localhost:3000
+Run the app
 
----
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+    npm run dev
+Open http://localhost:3000 in your browser.
