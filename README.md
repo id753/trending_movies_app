@@ -54,3 +54,5 @@ Run the app
 
     npm run dev
 Open http://localhost:3000 in your browser.
+
+### Previous version of the project: https://github.com/id753/goit-react-hw-05
