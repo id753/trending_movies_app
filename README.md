@@ -42,7 +42,7 @@ The following routes have been implemented in the application:
 ## ✅ Getting Started (Frontend)
 Clone the repository
       
-    git clone git@github.com:id753/todo-project.git
+    git clone git@github.com:id753/trending_movies_app.git
 Install dependencies
 
      npm install
