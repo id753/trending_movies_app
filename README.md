@@ -7,7 +7,7 @@
   <sub>Trending Movies Search App Screenshot</sub>
 </p> 
 
-## [Live Project](https://id753.github.io/todo-project/) 
+## [Live Project](https://trending-movies-app-omega.vercel.app/) 
 ## API Integration: Built using [TMDB Documentation](https://developer.themoviedb.org/docs/getting-started) for comprehensive media data retrieval.
 
 ## 🎨 Tech Stack
